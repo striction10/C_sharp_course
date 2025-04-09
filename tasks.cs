@@ -4,15 +4,34 @@ class tasks
 {
     static void Main()
     {
-        int num_1, num_2, num_3;
-        int min;
-        Console.WriteLine("Введите три числа:");
-        num_1 = Convert.ToInt32(Console.ReadLine());
-        num_2 = Convert.ToInt32(Console.ReadLine());
-        num_3 = Convert.ToInt32(Console.ReadLine());
-        min = num_1;
-        if (num_2 < min) { min = num_2; }
-        if (num_3 < min) { min = num_3; }
-        Console.WriteLine("Min: {0}", min);
+        int value;
+        Console.Write("Введите число: ");
+        value = Convert.ToInt32(Console.ReadLine());
+        switch (value) {
+            case 1:
+                Console.WriteLine("Понедельник");
+                break;
+            case 2:
+                Console.WriteLine("Вторник");
+                break;
+            case 3:
+                Console.WriteLine("Среда");
+                break;
+            case 4:
+                Console.WriteLine("Четверг");
+                break;
+            case 5:
+                Console.WriteLine("Пятница");
+                break;
+            case 6:
+                Console.WriteLine("Суббота");
+                break;
+            case 7:
+                Console.WriteLine("Воскресенье");
+                break;
+            default:
+                Console.WriteLine("Введено неверное значение!");
+                break;
+        }
     }
 }
