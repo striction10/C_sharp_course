@@ -1,21 +1,19 @@
 ﻿using System;
 
-class Tasks
+public class begin32
 {
-    static void Main()
+    public static void Main()
     {
-        double x, x1, sum;
-        Console.Write("Введите x: ");
-        x = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Введите x1: ");
-        x1 = Convert.ToDouble(Console.ReadLine());
-        sum = Sign(x) + Sign(x1);
-        Console.Write("Сумма равна: {0}", sum);
+        double t;
+        Console.WriteLine("Введите температуру по Цельсию: ");
+        t = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine(t);
+        Console.WriteLine("Ответ: {0:F2}", Change(t));
     }
-    static double Sign(double val)
+    public static double Change(double t)
     {
-        if (val < 0) { return -1; }
-        if (val > 0) { return 1; }
-        else { return 0; }
+        double tf;
+        tf = t * (9.0 / 5.0) + 32;
+        return tf;
     }
 }
